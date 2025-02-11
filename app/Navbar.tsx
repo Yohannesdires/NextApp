@@ -2,6 +2,9 @@
 // import Link from "next/link";
 'use client'
 import React, { useState } from "react";
+import { IoMdCloseCircleOutline } from "react-icons/io";
+import { VscThreeBars } from "react-icons/vsc";
+
 
 const Navbar = () => {
  
@@ -14,7 +17,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
@@ -52,9 +55,12 @@ const Navbar = () => {
               </div>
             </div>
             <div className="md:hidden flex items-center">
-              <button className="inline-flex items-center justify-center p-2 rounded-md text-white md:text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" 
-              onClick={toggleNavbar}>
+              <button className="inline-flex items-center justify-center p-2 rounded-md text-white md:text-white hover:text-white" 
+              //  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white
+              onClick={toggleNavbar}> 
+              { isClicked ?  < IoMdCloseCircleOutline  className="size-8"/> : <VscThreeBars className="size-8" />
 
+              }
               </button>
             </div>
           </div>
